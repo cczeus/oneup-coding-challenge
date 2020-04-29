@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import * as config from './config';
 
 class App extends Component {
 
@@ -20,18 +18,6 @@ class App extends Component {
     this.renderAllergyIntoleranceEntry = this.renderAllergyIntoleranceEntry.bind(this);
     this.renderCarePlan = this.renderCarePlan.bind(this);
     this.renderCondition = this.renderCondition.bind(this);
-  }
-
-  async getAccessToken() {
-    let options = {
-      headers: {
-        "Access-Control-Allow-Origin": "*"
-      }
-    }
-    let data = await fetch("https://api.1up.health/user-management/v1/user?app_user_id=1&client_id=" + config.oauth.id + "&client_secret=" + config.oauth.secret, options);
-    let access_token = await data.json();
-
-    this.setState({ access_token: access_token });
   }
 
   updateAccessToken(e) {

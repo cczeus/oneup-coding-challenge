@@ -11,7 +11,6 @@ class App extends Component {
       data: null
     };
 
-    this.getAccessToken = this.getAccessToken.bind(this);
     this.updateAccessToken = this.updateAccessToken.bind(this);
     this.fetchData = this.fetchData.bind(this);
     this.renderEntry = this.renderEntry.bind(this);
